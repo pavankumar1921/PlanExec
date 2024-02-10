@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "abcdef",
+    "database": "PlanExec_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postges",
+    "password": "abcdef",
+    "database": "PlanExec_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": "abcdef",
+    "database": "PlanExec_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
