@@ -49,6 +49,6 @@ jobs:
       - name: Run integration tests
         id: integration-tests
         run: |
-        cd server
-        npm install cypress cypress-json-results
-        npx cypress run
+          cd server
+          npm install cypress cypress-json-results
+          npx cypress run
