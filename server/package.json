@@ -5,8 +5,7 @@
   "scripts": {
     "start": "nodemon -e js,ejs",
     "test": "jest --detectOpenHandles",
-    "pretest": "NODE_ENV=test npx sequelize-cli db:drop && NODE_ENV=test npx sequelize-cli db:create && NODE_ENV=test npx sequelize-cli db:migrate",
-    "prepare": "cd .. && husky server/.husky"
+    "pretest": "NODE_ENV=test npx sequelize-cli db:drop && NODE_ENV=test npx sequelize-cli db:create && NODE_ENV=test npx sequelize-cli db:migrate"
   },
   "author": "Pavan",
   "license": "ISC",
