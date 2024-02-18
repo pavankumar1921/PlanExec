@@ -59,11 +59,11 @@ jobs:
     steps:
       - name: Get notifications in Slack
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+          slack_hook_url: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           if [[ ${{ needs.run-tests.result }} == 'success' ]]; then
-            curl -X POST -H 'Content-type: application/json' --data '{"text":"🎉 The automated testing is done successfully.!\nAll tests passed successfully. 🚀"}' $SLACK_WEBHOOK
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"🎉 The automated testing is done successfully.!\nAll tests passed successfully. 🚀"}' $slack_hook_url
           else
-            curl -X POST -H 'Content-type: application/json' --data '{"text":"😞 The automated testing failed.\nPlease review the logs for more information: https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}"}' $SLACK_WEBHOOK
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"😞 The automated testing failed.\nPlease review the logs for more information: https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}"}' $slack_hook_url
           fi
         
