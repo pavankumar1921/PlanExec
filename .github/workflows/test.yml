@@ -52,21 +52,18 @@ jobs:
           cd server
           npm install cypress cypress-json-results
           npx cypress run
-  notifications:
+  notify:
     runs-on: ubuntu-latest
     needs: [run-tests]
     if: ${{ always() }}
     steps:
       - name: Get notifications in Slack
-        uses: rtCamp/action-slack@v2
-        with:
-          status: ${{ job.status }}
-          text: |
-            Workflow *${{ github.workflow }}* has finished running with status *${{ job.status }}*.
-            Job: ${{ job.status }}
-            Repository: ${{ github.repository }}
-            Run ID: ${{ github.run_id }}
-            Workflow Run ID: ${{ github.run_id }}
-            Logs: ${{ github.run_id }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+        run: |
+          if [[ ${{ github.event.workflow_run.conclusion }} == 'success' ]]; then
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"🎉 The automated testing is done successfully.!\nAll tests passed successfully. 🚀"}' $SLACK_WEBHOOK
+          else
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"😞 The automated testing failed.\nPlease review the logs for more information: https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}"}' $SLACK_WEBHOOK
+          fi
+        
