@@ -25,7 +25,6 @@ describe("test suite ", () => {
         const eventData = { eventName: "concert", venue: "test venue" };
         try {
             const res = await request(server).post("/createEvent").send(eventData);
-        // Log response for debugging
             expect(res.status).toBe(302);
         } catch (err) {
             console.log(err);
