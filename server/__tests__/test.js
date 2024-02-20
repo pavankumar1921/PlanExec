@@ -18,7 +18,7 @@ describe("test suite ", () => {
     })
 
     test("frst",()=>{
-        expect(true).toBe(true)
+        expect(true).toBe(false)
     })
 
     test("creating an event", async () => {
