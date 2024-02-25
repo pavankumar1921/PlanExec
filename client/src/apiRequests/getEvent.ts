@@ -1,10 +1,35 @@
 import { API_ENDPOINT } from "../config/constants";
 
 export interface EventData {
-    id:number
+    
     eventName: string;
     venue: string;
+    description:string;
+    date:string;
 }
+
+export const postEventData = async (eventData: EventData): Promise<void> => {
+    try {
+        const response = await fetch(`${API_ENDPOINT}/createEvent`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventData),
+        });
+
+        if (!response.ok) {
+            if (response.status === 404) {
+                throw new Error("API endpoint not found");
+            } else {
+                throw new Error("Failed to post event data");
+            }
+        }
+    } catch (error) {
+        console.error("Error posting event data:", error);
+        throw error;
+    }
+};
 
 export const fetchEventData = async (): Promise<EventData[]> => {
     try {

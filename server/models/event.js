@@ -9,10 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static createEvent(eventName,venue) {
+    static associate(models) {
+      // define association here
+    }
+    static createEvent(eventName,venue,description,date) {
       return this.create({
         eventName,
-        venue
+        venue,
+        description,
+        date
       })
     }
 
@@ -21,15 +26,12 @@ module.exports = (sequelize, DataTypes) => {
         order: [['id',"DESC"]]
       })
     }
-    static associate(models) {
-      // define association here
-    }
-
-    
   }
   Event.init({
     eventName: DataTypes.STRING,
-    venue: DataTypes.STRING
+    venue: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    date: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Event',

@@ -15,6 +15,12 @@ module.exports = {
       venue: {
         type: Sequelize.STRING
       },
+      description: {
+        type: Sequelize.TEXT
+      },
+      date: {
+        type: Sequelize.DATE
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

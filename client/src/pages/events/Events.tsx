@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchEventData, EventData } from "../apiRequests/getEvent";
+import { fetchEventData, EventData } from "../../apiRequests/getEvent";
 
 const Events: React.FC = () => {
   const [events, setEvents] = useState<EventData[]>([]);
