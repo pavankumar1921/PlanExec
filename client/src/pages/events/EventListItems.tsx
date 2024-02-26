@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchEventData, EventData } from "../../apiRequests/getEvent";
+import CreateEventModal from "./CreateEvent";
+
 
 const Events: React.FC = () => {
   const [events, setEvents] = useState<EventData[]>([]);
@@ -32,14 +34,20 @@ const Events: React.FC = () => {
 
   return (
     <div>
+      <div>
+        <CreateEventModal/>
+      </div>
       <h1>Events</h1>
       <ul>
-        {events.map((event, index) => (
-          <li key={index}>
-            <h2>{event.eventName}</h2>
-            <p>Venue: {event.venue}</p>
-          </li>
-        ))}
+        <div >
+          {events.map((event, index) => (
+            <li key={index}>
+              <h2>{event.eventName}</h2>
+              <p>Venue: {event.venue}</p>
+            </li>
+          ))}
+        </div>
+        
       </ul>
     </div>
   );

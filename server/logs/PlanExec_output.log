@@ -1,0 +1,199 @@
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: 6,
+      eventName: 'add',
+      venue: 'addd',
+      description: 'adddd',
+      date: 2024-03-09T00:00:00.000Z,
+      createdAt: 2024-02-25T06:15:05.081Z,
+      updatedAt: 2024-02-25T06:15:05.081Z
+    },
+    _previousDataValues: {
+      id: 6,
+      eventName: 'add',
+      venue: 'addd',
+      description: 'adddd',
+      date: 2024-03-09T00:00:00.000Z,
+      createdAt: 2024-02-25T06:15:05.081Z,
+      updatedAt: 2024-02-25T06:15:05.081Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Event {
+    dataValues: {
+      id: 5,
+      eventName: 'qfwqef',
+      venue: 'efqfeqf',
+      description: 'qefqefqef',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T06:14:03.419Z,
+      updatedAt: 2024-02-25T06:14:03.419Z
+    },
+    _previousDataValues: {
+      id: 5,
+      eventName: 'qfwqef',
+      venue: 'efqfeqf',
+      description: 'qefqefqef',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T06:14:03.419Z,
+      updatedAt: 2024-02-25T06:14:03.419Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Event {
+    dataValues: {
+      id: 4,
+      eventName: 'aaaa',
+      venue: 'aaaaa',
+      description: 'aaaaa',
+      date: 2024-02-28T00:00:00.000Z,
+      createdAt: 2024-02-25T06:10:59.244Z,
+      updatedAt: 2024-02-25T06:10:59.244Z
+    },
+    _previousDataValues: {
+      id: 4,
+      eventName: 'aaaa',
+      venue: 'aaaaa',
+      description: 'aaaaa',
+      date: 2024-02-28T00:00:00.000Z,
+      createdAt: 2024-02-25T06:10:59.244Z,
+      updatedAt: 2024-02-25T06:10:59.244Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Event {
+    dataValues: {
+      id: 3,
+      eventName: 'yfgjk',
+      venue: 'here',
+      description: 'adgeqge',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T06:10:31.311Z,
+      updatedAt: 2024-02-25T06:10:31.311Z
+    },
+    _previousDataValues: {
+      id: 3,
+      eventName: 'yfgjk',
+      venue: 'here',
+      description: 'adgeqge',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T06:10:31.311Z,
+      updatedAt: 2024-02-25T06:10:31.311Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Event {
+    dataValues: {
+      id: 2,
+      eventName: 'frst',
+      venue: 'stadium',
+      description: 'gfhjk',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T04:55:46.023Z,
+      updatedAt: 2024-02-25T04:55:46.023Z
+    },
+    _previousDataValues: {
+      id: 2,
+      eventName: 'frst',
+      venue: 'stadium',
+      description: 'gfhjk',
+      date: 2024-02-29T00:00:00.000Z,
+      createdAt: 2024-02-25T04:55:46.023Z,
+      updatedAt: 2024-02-25T04:55:46.023Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Event {
+    dataValues: {
+      id: 1,
+      eventName: 'frst',
+      venue: 'stadium',
+      description: null,
+      date: null,
+      createdAt: 2024-02-25T04:54:01.769Z,
+      updatedAt: 2024-02-25T04:54:01.769Z
+    },
+    _previousDataValues: {
+      id: 1,
+      eventName: 'frst',
+      venue: 'stadium',
+      description: null,
+      date: null,
+      createdAt: 2024-02-25T04:54:01.769Z,
+      updatedAt: 2024-02-25T04:54:01.769Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+]
