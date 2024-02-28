@@ -14,6 +14,7 @@ export const postEventData = async (eventData: EventData): Promise<void> => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("authToken")}` 
             },
             body: JSON.stringify(eventData),
         });
@@ -37,6 +38,7 @@ export const fetchEventData = async (): Promise<EventData[]> => {
             method: "GET",
             headers: {
             "Content-Type": "application/json",
+            Authorization : `Bearer ${localStorage.getItem("authToken")}`
             }
         });
 

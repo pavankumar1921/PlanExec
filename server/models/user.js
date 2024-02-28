@@ -12,6 +12,14 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    static findUser(email) {
+      return this.findOne({
+        where:{
+          email
+        }
+      })
+    }
   }
   User.init({
     name: DataTypes.STRING,
