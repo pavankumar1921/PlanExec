@@ -15,7 +15,6 @@ module.exports = {
       },
       env_production: {
         PORT: 3000,
-         
       }
     }]
   }

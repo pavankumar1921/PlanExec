@@ -1200,3 +1200,470 @@ Executing (default): SELECT "id", "eventName", "venue", "description", "date", "
     isNewRecord: [33mfalse[39m
   }
 ]
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Executing (default): SELECT "id", "name", "email", "password", "createdAt", "updatedAt" FROM "Users" AS "User" WHERE "User"."email" = '6709@gmail.com' LIMIT 1;
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m7[39m,
+      eventName: [32m'efrrfrv4t'[39m,
+      venue: [32m'rgb5tg4t'[39m,
+      description: [32m'efvnoip3rnfpk4'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-27T06:13:33.024Z[39m,
+      updatedAt: [35m2024-02-27T06:13:33.024Z[39m
+    },
+    _previousDataValues: {
+      id: [33m7[39m,
+      eventName: [32m'efrrfrv4t'[39m,
+      venue: [32m'rgb5tg4t'[39m,
+      description: [32m'efvnoip3rnfpk4'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-27T06:13:33.024Z[39m,
+      updatedAt: [35m2024-02-27T06:13:33.024Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m6[39m,
+      eventName: [32m'add'[39m,
+      venue: [32m'addd'[39m,
+      description: [32m'adddd'[39m,
+      date: [35m2024-03-09T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:15:05.081Z[39m,
+      updatedAt: [35m2024-02-25T06:15:05.081Z[39m
+    },
+    _previousDataValues: {
+      id: [33m6[39m,
+      eventName: [32m'add'[39m,
+      venue: [32m'addd'[39m,
+      description: [32m'adddd'[39m,
+      date: [35m2024-03-09T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:15:05.081Z[39m,
+      updatedAt: [35m2024-02-25T06:15:05.081Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m5[39m,
+      eventName: [32m'qfwqef'[39m,
+      venue: [32m'efqfeqf'[39m,
+      description: [32m'qefqefqef'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:14:03.419Z[39m,
+      updatedAt: [35m2024-02-25T06:14:03.419Z[39m
+    },
+    _previousDataValues: {
+      id: [33m5[39m,
+      eventName: [32m'qfwqef'[39m,
+      venue: [32m'efqfeqf'[39m,
+      description: [32m'qefqefqef'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:14:03.419Z[39m,
+      updatedAt: [35m2024-02-25T06:14:03.419Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m4[39m,
+      eventName: [32m'aaaa'[39m,
+      venue: [32m'aaaaa'[39m,
+      description: [32m'aaaaa'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:59.244Z[39m,
+      updatedAt: [35m2024-02-25T06:10:59.244Z[39m
+    },
+    _previousDataValues: {
+      id: [33m4[39m,
+      eventName: [32m'aaaa'[39m,
+      venue: [32m'aaaaa'[39m,
+      description: [32m'aaaaa'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:59.244Z[39m,
+      updatedAt: [35m2024-02-25T06:10:59.244Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m3[39m,
+      eventName: [32m'yfgjk'[39m,
+      venue: [32m'here'[39m,
+      description: [32m'adgeqge'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:31.311Z[39m,
+      updatedAt: [35m2024-02-25T06:10:31.311Z[39m
+    },
+    _previousDataValues: {
+      id: [33m3[39m,
+      eventName: [32m'yfgjk'[39m,
+      venue: [32m'here'[39m,
+      description: [32m'adgeqge'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:31.311Z[39m,
+      updatedAt: [35m2024-02-25T06:10:31.311Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [32m'gfhjk'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T04:55:46.023Z[39m,
+      updatedAt: [35m2024-02-25T04:55:46.023Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [32m'gfhjk'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T04:55:46.023Z[39m,
+      updatedAt: [35m2024-02-25T04:55:46.023Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-02-25T04:54:01.769Z[39m,
+      updatedAt: [35m2024-02-25T04:54:01.769Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-02-25T04:54:01.769Z[39m,
+      updatedAt: [35m2024-02-25T04:54:01.769Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m7[39m,
+      eventName: [32m'efrrfrv4t'[39m,
+      venue: [32m'rgb5tg4t'[39m,
+      description: [32m'efvnoip3rnfpk4'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-27T06:13:33.024Z[39m,
+      updatedAt: [35m2024-02-27T06:13:33.024Z[39m
+    },
+    _previousDataValues: {
+      id: [33m7[39m,
+      eventName: [32m'efrrfrv4t'[39m,
+      venue: [32m'rgb5tg4t'[39m,
+      description: [32m'efvnoip3rnfpk4'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-27T06:13:33.024Z[39m,
+      updatedAt: [35m2024-02-27T06:13:33.024Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m6[39m,
+      eventName: [32m'add'[39m,
+      venue: [32m'addd'[39m,
+      description: [32m'adddd'[39m,
+      date: [35m2024-03-09T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:15:05.081Z[39m,
+      updatedAt: [35m2024-02-25T06:15:05.081Z[39m
+    },
+    _previousDataValues: {
+      id: [33m6[39m,
+      eventName: [32m'add'[39m,
+      venue: [32m'addd'[39m,
+      description: [32m'adddd'[39m,
+      date: [35m2024-03-09T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:15:05.081Z[39m,
+      updatedAt: [35m2024-02-25T06:15:05.081Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m5[39m,
+      eventName: [32m'qfwqef'[39m,
+      venue: [32m'efqfeqf'[39m,
+      description: [32m'qefqefqef'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:14:03.419Z[39m,
+      updatedAt: [35m2024-02-25T06:14:03.419Z[39m
+    },
+    _previousDataValues: {
+      id: [33m5[39m,
+      eventName: [32m'qfwqef'[39m,
+      venue: [32m'efqfeqf'[39m,
+      description: [32m'qefqefqef'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:14:03.419Z[39m,
+      updatedAt: [35m2024-02-25T06:14:03.419Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m4[39m,
+      eventName: [32m'aaaa'[39m,
+      venue: [32m'aaaaa'[39m,
+      description: [32m'aaaaa'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:59.244Z[39m,
+      updatedAt: [35m2024-02-25T06:10:59.244Z[39m
+    },
+    _previousDataValues: {
+      id: [33m4[39m,
+      eventName: [32m'aaaa'[39m,
+      venue: [32m'aaaaa'[39m,
+      description: [32m'aaaaa'[39m,
+      date: [35m2024-02-28T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:59.244Z[39m,
+      updatedAt: [35m2024-02-25T06:10:59.244Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m3[39m,
+      eventName: [32m'yfgjk'[39m,
+      venue: [32m'here'[39m,
+      description: [32m'adgeqge'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:31.311Z[39m,
+      updatedAt: [35m2024-02-25T06:10:31.311Z[39m
+    },
+    _previousDataValues: {
+      id: [33m3[39m,
+      eventName: [32m'yfgjk'[39m,
+      venue: [32m'here'[39m,
+      description: [32m'adgeqge'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T06:10:31.311Z[39m,
+      updatedAt: [35m2024-02-25T06:10:31.311Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [32m'gfhjk'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T04:55:46.023Z[39m,
+      updatedAt: [35m2024-02-25T04:55:46.023Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [32m'gfhjk'[39m,
+      date: [35m2024-02-29T00:00:00.000Z[39m,
+      createdAt: [35m2024-02-25T04:55:46.023Z[39m,
+      updatedAt: [35m2024-02-25T04:55:46.023Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-02-25T04:54:01.769Z[39m,
+      updatedAt: [35m2024-02-25T04:54:01.769Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'frst'[39m,
+      venue: [32m'stadium'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-02-25T04:54:01.769Z[39m,
+      updatedAt: [35m2024-02-25T04:54:01.769Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
