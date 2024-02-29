@@ -1,5 +1,5 @@
 describe("PlanExec Integration tests", () => {
-  const appUrl = "http://localhost:8000";
+  const appUrl = "http://localhost:3000";
   let token;
 
   before(() => {
@@ -65,6 +65,6 @@ describe("PlanExec Integration tests", () => {
       }
     })
     .its("status")
-    .should("eq",201)
+    .should("eq",200)
   });
 });
