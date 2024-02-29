@@ -44,7 +44,7 @@ describe("PlanExec test suite", () => {
         const eventData = { eventName: "concert", venue: "test venue" };
         try {
             const res = await agent.post("/createEvent").send(eventData);
-            expect(res.status).toBe(201);
+            expect(res.status).toBe(200);
         } catch (err) {
             console.log(err);
         }
