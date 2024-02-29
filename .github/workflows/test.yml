@@ -3,7 +3,8 @@ on: push
 env:
   PG_DATABASE: PlanExec_test
   PG_USER: postgres
-  PG_PASSWORD: abcdef
+  PG_PASSWORD: ${{ secrets.DB_PASSWORD}}
+  JWT_SECRET: ${{ secrets.JWT_SECRET}}
 
 jobs:
 
