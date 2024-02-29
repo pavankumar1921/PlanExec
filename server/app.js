@@ -16,7 +16,7 @@ const { User,Event} = require("./models")
 const saltRounds = 10
 
 const jwt = require("jsonwebtoken");
-const authenticateToken = require("../middleware/authentication.js");
+const authenticateToken = require("./middleware/authentication");
 require("dotenv").config();
 
 const generateToken = (id) => {
