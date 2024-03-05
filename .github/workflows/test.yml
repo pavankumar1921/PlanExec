@@ -73,7 +73,7 @@ jobs:
 
   auto-deploy:
     name: auto deployment
-    needs: [run-tests]
+    needs: [docker-build]
     runs-on: ubuntu-latest
     steps:
       - name: deploying to render
@@ -83,7 +83,7 @@ jobs:
           api-key: ${{secrets.RENDER_API_KEY}}
   notify:
     runs-on: ubuntu-latest
-    needs: [run-tests,auto-deploy]
+    needs: [run-tests,auto-deploy,docker-build]
     if: ${{ always() }}
     steps:
       - name: Get notifications in Slack
