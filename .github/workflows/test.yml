@@ -7,7 +7,6 @@ env:
   JWT_SECRET: ${{ secrets.JWT_SECRET}}
 
 jobs:
-
   run-tests:
     runs-on: ubuntu-latest
     services:
