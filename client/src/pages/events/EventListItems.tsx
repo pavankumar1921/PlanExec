@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { fetchEventData, EventData } from "../../apiRequests/getEvent";
 import CreateEventModal from "./CreateEvent";
 
-
 const Events: React.FC = () => {
   const [events, setEvents] = useState<EventData[]>([]);
   const [loading, setLoading] = useState(true);
@@ -35,20 +34,26 @@ const Events: React.FC = () => {
   return (
     <div>
       <div>
-        <CreateEventModal/>
+        <CreateEventModal />
       </div>
       <h1>Events</h1>
-      <ul>
-        <div >
-          {events.map((event, index) => (
-            <li key={index}>
-              <h2>{event.eventName}</h2>
-              <p>Venue: {event.venue}</p>
-            </li>
-          ))}
-        </div>
-        
-      </ul>
+      <div style={{ display: "flex", flexWrap: "wrap" }}> {/* Added inline styles for the container */}
+        {events.map((event, index) => (
+          <div
+            key={index}
+            style={{
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              padding: "10px",
+              margin: "10px",
+              width: "200px" // Set width according to your design
+            }}
+          >
+            <h2>{event.eventName}</h2>
+            <p>Venue: {event.venue}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

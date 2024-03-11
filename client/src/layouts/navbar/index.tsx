@@ -5,7 +5,7 @@ import React from "react";
 const AccountLayout = () => {
   return (
     <>
-      <div className="bg-teal-400">
+      <div className="bg-teal-600 rounded-lg">
         <Appbar />
       </div>
       <main>

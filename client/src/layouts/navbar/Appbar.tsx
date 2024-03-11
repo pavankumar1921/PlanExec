@@ -37,7 +37,7 @@ const Appbar = () => {
 
   return (
     <>
-      <Disclosure as="nav" className="border-b border-slate-500">
+      <Disclosure as="nav" className="">
         {() => (
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
@@ -48,7 +48,7 @@ const Appbar = () => {
               </div>
               <div className="hidden md:block flex items-center justify-center">
                 <h1 className="text-2xl font-bold text-gray-800">
-                  Sports News
+                  PlanExec
                 </h1>
               </div>
               <div className="hidden md:block">
