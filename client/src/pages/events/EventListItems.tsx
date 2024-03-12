@@ -8,7 +8,13 @@ const Events: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const {t} = useTranslation()
-  
+  const dateFormatter = new Intl.DateTimeFormat(navigator.language, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -53,7 +59,7 @@ const Events: React.FC = () => {
           >
             <h2>{event.eventName}</h2>
             <p>{t("Venue")}: {event.venue}</p>
-            <p>{t("Date")}: {event.date}</p>
+            <p>{t("Date")}: {dateFormatter.format(new Date(event.date))}</p>
 
           </div>
         ))}
