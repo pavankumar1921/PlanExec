@@ -31,6 +31,7 @@ app.post("/createEvent", async (req, res) => {
         const venue = req.body.venue;
         const description = req.body.description
         const date = req.body.date
+        console.log(date)
         const event = await Event.create({
             eventName,
             venue,

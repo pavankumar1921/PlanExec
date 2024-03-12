@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { fetchEventData, EventData } from "../../apiRequests/getEvent";
 import CreateEventModal from "./CreateEvent";
+import { useTranslation } from "react-i18next";
 
 const Events: React.FC = () => {
   const [events, setEvents] = useState<EventData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+  const {t} = useTranslation()
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -36,7 +38,7 @@ const Events: React.FC = () => {
       <div>
         <CreateEventModal />
       </div>
-      <h1>Events</h1>
+      <h1>{t("Events")}</h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}> {/* Added inline styles for the container */}
         {events.map((event, index) => (
           <div
@@ -50,12 +52,15 @@ const Events: React.FC = () => {
             }}
           >
             <h2>{event.eventName}</h2>
-            <p>Venue: {event.venue}</p>
+            <p>{t("Venue")}: {event.venue}</p>
+            <p>{t("Date")}: {event.date}</p>
+
           </div>
         ))}
       </div>
     </div>
   );
 };
+
 
 export default Events;

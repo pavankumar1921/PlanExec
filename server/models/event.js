@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     eventName: DataTypes.STRING,
     venue: DataTypes.STRING,
     description: DataTypes.TEXT,
-    date: DataTypes.DATE
+    date: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Event',

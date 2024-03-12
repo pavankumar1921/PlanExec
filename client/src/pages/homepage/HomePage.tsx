@@ -7,6 +7,9 @@ const HomePage = () => {
         <div>
             <AccountLayout/>
             <div>
+                
+            </div>
+            <div>
                 <Events/>
             </div>
         </div>

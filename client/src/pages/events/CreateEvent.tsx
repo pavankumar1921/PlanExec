@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { postEventData } from "../../apiRequests/getEvent";
+import { useTranslation } from "react-i18next";
 
 interface Inputs {
   eventName: string;
@@ -10,24 +11,13 @@ interface Inputs {
 }
 
 const CreateEventModal: React.FC = () => {
+  const {t} = useTranslation()
   const { register, handleSubmit, formState: { errors }, reset } = useForm<Inputs>();
   const [showModal, setShowModal] = useState(false);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      const date = new Date(data.date);
-  
-      // Check if the parsed date is valid
-      if (isNaN(date.getTime())) {
-        // Invalid date format
-        alert("Please enter a valid date");
-        return;
-      }
-  
-      // Assign the parsed date back to the data object
-      data.date = date.toISOString();
-      
-      await postEventData(data);
+      postEventData(data);
       alert("Event created successfully!");
       setShowModal(false);
       reset();
@@ -39,7 +29,7 @@ const CreateEventModal: React.FC = () => {
   return (
     <div>
       <button onClick={() => setShowModal(true)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Create Event
+        {t("Create Event")}
       </button>
       {showModal && (
         <div className="modal fixed top-0 left-0 w-full h-full flex items-center justify-center">

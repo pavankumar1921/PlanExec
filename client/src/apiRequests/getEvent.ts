@@ -1,7 +1,6 @@
 import { API_ENDPOINT } from "../config/constants";
 
 export interface EventData {
-    
     eventName: string;
     venue: string;
     description:string;
