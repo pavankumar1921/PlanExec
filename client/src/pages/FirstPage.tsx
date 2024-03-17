@@ -8,6 +8,9 @@ import band from "../assets/images/aband.jpg"
 // import "./FirstPage.css"
 
 const FirstPage = () => {
+    const throwError = () => {
+        throw new Error('An error occurred after clicking on Signin.');
+    };
     return (
         <div className="relative flex justify-center items-center h-screen text-white">
             <div className="container mx-auto flex flex-col items-center">
@@ -20,7 +23,7 @@ const FirstPage = () => {
                         </p>
                         <div className="flex mt-4">
                             <div className="mr-4">
-                                <Link to="/signin" className="py-2 px-4 bg-transparent rounded-md text-black border border-black hover:bg-black hover:text-white">Signin</Link>
+                                <Link to="/signin" className="py-2 px-4 bg-transparent rounded-md text-black border border-black hover:bg-black hover:text-white" onClick={throwError}>Signin</Link>
                             </div>
                             <div>
                                 <Link to="/signup" className="py-2 px-4 bg-transparent rounded-md text-black border border-black hover:bg-black hover:text-white">Signup</Link>
