@@ -6,7 +6,7 @@ import Signin from "../pages/signin";
 import Logout from "../pages/logout";
 import AccountLayout from "../layouts/navbar";
 import ProtectedRoute from "./ProtectedRoute";
-import FirstPage from "../FirstPage";
+import FirstPage from "../pages/FirstPage"
 import { HomeIcon } from "@heroicons/react/24/outline";
 
 const router = createBrowserRouter([

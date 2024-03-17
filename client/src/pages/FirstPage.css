@@ -1,0 +1,57 @@
+/* FirstPage.css */
+
+.first-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.image-container {
+    margin-bottom: 20px; /* Add spacing between image and buttons */
+}
+
+.front-image {
+    max-width: 100%; /* Ensure the image fits container */
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Add spacing between buttons */
+}
+
+.btn {
+    padding: 10px 20px; /* Adjust padding for buttons */
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+.sign-in-btn {
+    background-color: #007bff; /* Change background color for Signin button */
+}
+
+.sign-up-btn {
+    background-color: #28a745; /* Change background color for Signup button */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Reduce opacity on hover for visual feedback */
+}
+/* FirstPage.css */
+
+.masked-text {
+    background: linear-gradient(to right, transparent, white 50%, transparent); /* Define a gradient to mask the text */
+    -webkit-background-clip: text; /* Apply background-clip: text for WebKit-based browsers */
+    background-clip: text; /* Apply background-clip: text */
+    color: transparent; /* Set text color to transparent */
+}
+/* FirstPage.css */
+
+.text-mask {
+    mix-blend-mode: difference; /* Apply blend mode to make the text appear only where it overlaps the image */
+}
+
