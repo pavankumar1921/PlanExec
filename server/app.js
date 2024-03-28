@@ -24,7 +24,6 @@ const generateToken = (id) => {
     return jwt.sign({id},process.env.JWT_SECRET,{expiresIn:"3d"})
 }
 
-//post
 app.post("/createEvent", async (req, res) => {
     try {
         const eventName = req.body.eventName;
