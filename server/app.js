@@ -13,6 +13,7 @@ app.use(cookieParser("some secret string"))
 
 const { User,Event} = require("./models")
 
+
 const saltRounds = 10
 
 const jwt = require("jsonwebtoken");
