@@ -5,7 +5,6 @@ import ticket from "../assets/images/ticket.jpg";
 import image from "../assets/images/output.png"
 import space from "../assets/images/space.jpg"
 import band from "../assets/images/aband.jpg"
-// import "./FirstPage.css"
 
 const FirstPage = () => {
     const throwError = () => {

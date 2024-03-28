@@ -27,7 +27,7 @@ const Events: React.FC = () => {
         setLoading(false);
       }
     };
-
+    
     fetchData();
   }, []);
 
@@ -45,7 +45,7 @@ const Events: React.FC = () => {
         <CreateEventModal />
       </div>
       <h1>{t("Events")}</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}> {/* Added inline styles for the container */}
+      <div style={{ display: "flex", flexWrap: "wrap" }}> 
         {events.map((event, index) => (
           <div
             key={index}
@@ -54,7 +54,6 @@ const Events: React.FC = () => {
               borderRadius: "5px",
               padding: "10px",
               margin: "10px",
-              width: "200px" // Set width according to your design
             }}
           >
             <h2>{event.eventName}</h2>
