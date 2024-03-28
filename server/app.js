@@ -39,6 +39,7 @@ app.post("/createEvent", async (req, res) => {
             date
         });
 
+
         console.log(event);
         res.status(200).json({message:"Event created successfully"})
     } catch (err) {
