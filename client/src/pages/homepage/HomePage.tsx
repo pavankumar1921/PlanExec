@@ -6,12 +6,18 @@ const HomePage = () => {
     return (
         <div>
             <AccountLayout/>
-            <div>
-                
+            <div className="grid grid-rows-auto grid-cols-6 grid-flow-col">
+                <div className="col-start-1 col-span-4">
+                upcoming event
+                </div>
+                <div className=" col-span-4 col-start-1">
+                    <Events/>
+                </div>
+                <div className="col-start-5 col-span-2">
+                serviuces
+                </div>
             </div>
-            <div>
-                <Events/>
-            </div>
+            
         </div>
     )
  }
