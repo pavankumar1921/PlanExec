@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser("some secret string"))
 
-const { User,Event} = require("./models")
+const { User,Event,Services} = require("./models")
 
 const saltRounds = 10
 
@@ -90,4 +90,31 @@ app.post("/signin", async(req,res) => {
     }
 })
 
+app.post("/createService", async(req,res)=> {
+    try{
+        const name = req.body.name
+        const description = req.body.description
+        const contact = req.body.contact
+        const service = await Services.create({
+            name,
+            description,
+            contact
+        })
+        console.log(service)
+        res.status(200).json({message:"Service create successfully"})
+    }catch (err) {
+        console.log(err)
+        res.status(500).send("Error creating a service")
+    }
+})
+
+app.get("/allServices",async(req,res) => {
+    try {
+        const services = await Services.getServices()
+        res.status(200).json(services)
+    }catch(err){
+        console.log(err)
+        res.status(500).json({error:err})
+    }
+})
 module.exports = app;

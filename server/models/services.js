@@ -12,11 +12,26 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    static createService(name,description,contact) {
+      return this.create({
+        name,
+        description,
+        contact
+      })
+    }
+
+    static getServices(){
+      return this.findAll({
+        order: [['id','DESC']]
+      })
+    }
+
   }
   Services.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
-    contact: DataTypes.INTEGER
+    contact: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Services',

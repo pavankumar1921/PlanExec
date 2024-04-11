@@ -1,6 +1,7 @@
 import React from "react";
 import Events from "../events";
 import AccountLayout from "../../layouts/navbar";
+import Services from "../services";
 
 const HomePage = () => {
     return (
@@ -14,7 +15,7 @@ const HomePage = () => {
                     <Events/>
                 </div>
                 <div className="col-start-5 col-span-2">
-                serviuces
+                    <Services/>
                 </div>
             </div>
             
