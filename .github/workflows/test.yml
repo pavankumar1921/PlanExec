@@ -5,6 +5,7 @@ env:
   PG_USER: postgres
   PG_PASSWORD: ${{ secrets.DB_PASSWORD}}
   JWT_SECRET: ${{ secrets.JWT_SECRET}}
+  OPEN_API_KEY: ${{ secrets.OPENAI_API_KEY}}
 
 jobs:
   run-tests:
