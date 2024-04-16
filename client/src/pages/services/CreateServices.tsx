@@ -5,9 +5,7 @@ import { useTranslation } from "react-i18next";
 import { t } from "i18next";
 
 interface Inputs {
-    name: string
-    description: string
-    contact: string
+   aitext:string
 }
 
 const CreateServiceModal: React.FC = () => {
@@ -16,7 +14,7 @@ const CreateServiceModal: React.FC = () => {
 
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         try{
-            postServiceData(data)
+            await postServiceData({aitext:data.aitext})
             alert("Service created successfully");
             setShowModal(false)
             reset()
@@ -39,20 +37,21 @@ const CreateServiceModal: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-6">Create Service</h2>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Service Name:</label>
-                  <input type="text" id="name" {...register("name", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  {errors.name && <span className="text-red-500">Service Name is required</span>}
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="description" className="block text-gray-700 font-bold mb-2">Description:</label>
-                  <textarea id="description" {...register("description", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                  {errors.description && <span className="text-red-500">Description is required</span>}
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="contact" className="block text-gray-700 font-bold mb-2">Contact:</label>
-                  <input type="text" id="contact" {...register("contact", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  {errors.contact && <span className="text-red-500">Contact is required</span>}
+                <label
+                htmlFor="aitext"
+                style={{ marginBottom: "8px", color: "white" }}
+              >
+                Event details:
+              </label>
+              <p style={{ marginBottom: "8px", color: "white" }}>
+                Mention  eventName, venue, description, date in the details{" "}
+              </p>
+              <textarea
+                id="aitext"
+                {...register("aitext", { required: true })}
+                style={{ marginBottom: "8px", padding: "8px", height: "200px" }}
+                required
+              />
                 </div>
 
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>

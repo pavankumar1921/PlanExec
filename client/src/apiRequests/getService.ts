@@ -5,9 +5,10 @@ export interface ServiceData {
     name: string;
     description: string;
     contact: string;
+    aitext? : string
 }
 
-export const postServiceData = async (serviceData: ServiceData): Promise<void> =>{
+export const postServiceData = async (serviceData: {aitext:string}): Promise<void> =>{
     try {
         const response = await fetch(`${API_ENDPOINT}/createService`,{
             method: "POST",

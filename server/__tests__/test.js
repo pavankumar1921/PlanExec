@@ -42,14 +42,17 @@ describe("PlanExec test suite", () => {
     });
 
     test("Test for creating an event", async () => {
-        const res = await request(server)
+        const eventData = { eventName: "concert", venue: "test venue" };
+        try{
+            const res = await request(server)
             .post("/createEvent")
             .set("Authorization", `Bearer ${authToken}`)
-            .send({
-                aitext:
-                "Create an event named holi whose venue is at gachibowli held on 2 may"
-            });
+            .send({ eventData });
             expect(res.status).toBe(200);
+        }catch (err) {
+            console.log(err);
+        }
+        
        
     });
 

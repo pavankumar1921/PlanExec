@@ -14,7 +14,6 @@ app.use(cookieParser("some secret string"))
 const { User,Event,Services} = require("./models")
 const getResponse = require("./middleware/chatGPT")
 
-
 const saltRounds = 10
 
 const jwt = require("jsonwebtoken");
@@ -25,31 +24,28 @@ const generateToken = (id) => {
     return jwt.sign({id},process.env.JWT_SECRET,{expiresIn:"3d"})
 }
 
+//post
 app.post("/createEvent", async (req, res) => {
     try {
-        // const eventName = req.body.eventName;
-        // console.log(eventName)
-        // const venue = req.body.venue;
-        // const description = req.body.description
-        // const date = req.body.date
-        // console.log(date)
-        const {aitext} = req.body;
-        const response = await getResponse(aitext);
-        const argumentsObject = JSON.parse(response.arguments);
-        const eventName = argumentsObject.eventName;
-        const venue = argumentsObject.venue;
-        const description = argumentsObject.description;
+        const eventName = req.body.eventName;
+        console.log(eventName)
+        const venue = req.body.venue;
+        const description = req.body.description
+        const date = req.body.date
+        console.log(date)
+        // const {aitext} = req.body;
+        // const response = await getResponse(aitext);
+        // const argumentsObject = JSON.parse(response.arguments);
+        // const eventName = argumentsObject.eventName;
+        // const venue = argumentsObject.venue;
+        // const description = argumentsObject.description;
         // const date = argumentsObject.date
-        const dateStr = new Date( argumentsObject.date);
-
-        
         const event = await Event.create({
             eventName,
             venue,
             description,
-            dateStr
+            date
         });
-
 
         console.log(event);
         res.status(200).json({message:"Event created successfully"})
@@ -104,9 +100,12 @@ app.post("/signin", async(req,res) => {
 
 app.post("/createService", async(req,res)=> {
     try{
-        const name = req.body.name
-        const description = req.body.description
-        const contact = req.body.contact
+        const {aitext} = req.body
+        const response = await getResponse(aitext);
+        const argumentsObject = JSON.parse(response.arguments)
+        const name = argumentsObject.name
+        const description = argumentsObject.description
+        const contact = argumentsObject.contact
         const service = await Services.create({
             name,
             description,

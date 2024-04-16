@@ -60,8 +60,8 @@ describe("PlanExec Integration tests", () => {
         Authorization: `Bearer ${token}`
       },
       body: {
-        aitext:
-        "Create an event named holi whose venue is at gachibowli held on 2 may"
+        eventName: "Test Event",
+        venue: "Test Venue"
       }
     })
     .its("status")

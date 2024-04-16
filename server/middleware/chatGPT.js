@@ -6,10 +6,9 @@ const openai = new OpenAI({
 })
 
 const systemPrompt = 
-"You are an assistant helping a user to reate events. " +
-"Given a messag, you should extract the details of events." +
-"The user will provide the details like eventName, venue, description, date." + "To compute relatives dates, assume that the current timestamp is " +
-new Date().toISOString() +
+"You are an assistant helping a user to create services. " +
+"Given a message, you should extract the details of services." +
+"The user will provide the details like name, description, contact." +
 ".";
 
 async function askChatGpt(question) {
@@ -23,33 +22,29 @@ async function askChatGpt(question) {
                 {
                     type: "function",
                     function: {
-                        name: "createEvent",
-                        description: "Create a new event",
+                        name: "createService",
+                        description: "Create a new service",
                         parameters:{
                             type: "object",
                             properties: {
-                                eventName: {
+                                name: {
                                     type: "string",
-                                    description: "This is the name of the event"
-                                },
-                                venue: {
-                                    type: "string",
-                                    description: "The name of the venue"
+                                    description: "This is the name of the service"
                                 },
                                 description: {
                                     type: "string",
-                                    description : "This is description of the event"
+                                    description : "This is description of the service"
                                 },
-                                date: {
+                                contact: {
                                     type: "string",
-                                    description: "The date of event when it is conducted",
+                                    description: "The contact of person who created service",
                                 }
                             }
                         }
                     }
                 }
             ],
-            tool_choice: { type: "function", function: { name: "createEvent" }},
+            tool_choice: { type: "function", function: { name: "createService" }},
             model: "gpt-3.5-turbo",
         })
         return chatCompletion.choices[0].message.tool_calls[0].function;
