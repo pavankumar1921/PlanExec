@@ -42,13 +42,7 @@ app.post("/createEvent", async (req, res) => {
         // const date = argumentsObject.date
         const dateStr = new Date( argumentsObject.date);
 
-        // Parse the date string into a JavaScript Date object
-        // const date = new Date(dateStr);
-
-        // Check if the date is valid
-        // if (isNaN(date.getTime())) {
-        //     throw new Error("Invalid date format");
-        // }
+        
         const event = await Event.create({
             eventName,
             venue,
