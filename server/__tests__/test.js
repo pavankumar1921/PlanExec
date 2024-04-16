@@ -3,13 +3,14 @@ const db = require("../models/index");
 const app = require("../app");
 const jwt = require("jsonwebtoken");
 
-let server, agent, token;
+let server, agent;
 
 describe("PlanExec test suite", () => {
+    let authToken
     beforeAll(async () => {
-        await db.sequelize.sync({ force: true });
-        server = app.listen(7000);
+        server = app.listen(7000,()=>{});
         agent = request.agent(server);
+        authToken = jwt.sign({ id: 1 }, process.env.JWT_SECRET, { expiresIn: "1h" });
     });
 
     afterAll(async () => {
@@ -41,21 +42,22 @@ describe("PlanExec test suite", () => {
     });
 
     test("Test for creating an event", async () => {
-        const eventData = { eventName: "concert", venue: "test venue" };
-        try {
-            const res = await agent.post("/createEvent").send(eventData);
+        const res = await request(server)
+            .post("/createEvent")
+            .set("Authorization", `Bearer ${authToken}`)
+            .send({
+                aitext:
+                "Create an event named holi whose venue is at gachibowli held on 2 may"
+            });
             expect(res.status).toBe(200);
-        } catch (err) {
-            console.log(err);
-        }
+       
     });
 
     test("Test for fetching all events", async () => {
-        try {
-            const res = await agent.get("/allEvents");
+            const res = await request(server)
+            .get("/allEvents")
+            .set("Authorization", `Bearer ${authToken}`);
             expect(res.status).toBe(200);
-        } catch (err) {
-            console.log(err);
-        }
+        
     });
 });
