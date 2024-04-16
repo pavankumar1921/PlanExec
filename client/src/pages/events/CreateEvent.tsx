@@ -4,10 +4,7 @@ import { postEventData } from "../../apiRequests/getEvent";
 import { useTranslation } from "react-i18next";
 
 interface Inputs {
-  eventName: string;
-  venue: string;
-  description: string;
-  date: string;
+  aitext:string;
 }
 
 const CreateEventModal: React.FC = () => {
@@ -17,7 +14,7 @@ const CreateEventModal: React.FC = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      postEventData(data);
+      await postEventData({aitext:data.aitext});
       alert("Event created successfully!");
       setShowModal(false);
       reset();
@@ -40,29 +37,22 @@ const CreateEventModal: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-6">Create Event</h2>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
-                  <label htmlFor="eventName" className="block text-gray-700 font-bold mb-2">Event Name:</label>
-                  <input type="text" id="eventName" {...register("eventName", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  {errors.eventName && <span className="text-red-500">Event Name is required</span>}
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="venue" className="block text-gray-700 font-bold mb-2">Venue:</label>
-                  <input type="text" id="venue" {...register("venue", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  {errors.venue && <span className="text-red-500">Venue is required</span>}
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="description" className="block text-gray-700 font-bold mb-2">Description:</label>
-                  <textarea id="description" {...register("description", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                  {errors.description && <span className="text-red-500">Description is required</span>}
-                </div>
-
-                <div className="mb-4">
-                  <label htmlFor="date" className="block text-gray-700 font-bold mb-2">Date:</label>
-                  <input type="date" id="date" {...register("date", { required: true })} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  {errors.date && <span className="text-red-500">Date is required</span>}
-                </div>
-
+                <label
+                htmlFor="aitext"
+                style={{ marginBottom: "8px", color: "white" }}
+              >
+                Event details:
+              </label>
+              <p style={{ marginBottom: "8px", color: "white" }}>
+                Mention  eventName, venue, description, date in the details{" "}
+              </p>
+              <textarea
+                id="aitext"
+                {...register("aitext", { required: true })}
+                style={{ marginBottom: "8px", padding: "8px", height: "200px" }}
+                required
+              />
+                  </div>
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
               </form>
             </div>

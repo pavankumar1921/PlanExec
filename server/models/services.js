@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Event extends Model {
+  class Services extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -12,30 +12,29 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-    
-    static createEvent(eventName,venue,description,date) {
+
+    static createService(name,description,contact) {
       return this.create({
-        eventName,
-        venue,
+        name,
         description,
-        date
+        contact
       })
     }
 
-    static getEvents(){
+    static getServices(){
       return this.findAll({
-        order: [['id',"DESC"]]
+        order: [['id','DESC']]
       })
     }
+
   }
-  Event.init({
-    eventName: DataTypes.STRING,
-    venue: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    date: DataTypes.STRING
+  Services.init({
+    name: DataTypes.STRING,
+    description: DataTypes.STRING,
+    contact: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Event',
+    modelName: 'Services',
   });
-  return Event;
+  return Services;
 };

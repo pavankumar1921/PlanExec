@@ -7,7 +7,7 @@
     "start:prod": "node index.js",
     "test": "jest --detectOpenHandles",
     "pretest": "NODE_ENV=test npx sequelize-cli db:drop && NODE_ENV=test npx sequelize-cli db:create && NODE_ENV=test npx sequelize-cli db:migrate",
-    "pm2":"npx pm2 start ecosystem.config.js --no-daemon",
+    "pm2": "npx pm2 start ecosystem.config.js --no-daemon",
     "cypress:test": "npx cypress run"
   },
   "author": "Pavan",
@@ -37,6 +37,7 @@
     "express": "^4.18.2",
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
+    "openai": "^4.33.1",
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "router": "^1.3.8",
