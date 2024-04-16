@@ -5,9 +5,12 @@ export interface EventData {
     venue: string;
     description:string;
     date:string;
+    aitext? : string
 }
 
-export const postEventData = async (eventData: EventData): Promise<void> => {
+
+
+export const postEventData = async (eventData: {aitext:string}): Promise<void> => {
     try {
         const response = await fetch(`${API_ENDPOINT}/createEvent`, {
             method: "POST",

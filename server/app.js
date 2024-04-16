@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser("some secret string"))
 
 const { User,Event,Services} = require("./models")
+const getResponse = require("./middleware/chatGPT")
 
 const saltRounds = 10
 
@@ -26,17 +27,33 @@ const generateToken = (id) => {
 //post
 app.post("/createEvent", async (req, res) => {
     try {
-        const eventName = req.body.eventName;
-        console.log(eventName)
-        const venue = req.body.venue;
-        const description = req.body.description
-        const date = req.body.date
-        console.log(date)
+        // const eventName = req.body.eventName;
+        // console.log(eventName)
+        // const venue = req.body.venue;
+        // const description = req.body.description
+        // const date = req.body.date
+        // console.log(date)
+        const {aitext} = req.body;
+        const response = await getResponse(aitext);
+        const argumentsObject = JSON.parse(response.arguments);
+        const eventName = argumentsObject.eventName;
+        const venue = argumentsObject.venue;
+        const description = argumentsObject.description;
+        // const date = argumentsObject.date
+        const dateStr = new Date( argumentsObject.date);
+
+        // Parse the date string into a JavaScript Date object
+        // const date = new Date(dateStr);
+
+        // Check if the date is valid
+        // if (isNaN(date.getTime())) {
+        //     throw new Error("Invalid date format");
+        // }
         const event = await Event.create({
             eventName,
             venue,
             description,
-            date
+            dateStr
         });
 
         console.log(event);
