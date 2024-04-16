@@ -58,6 +58,5 @@ describe("PlanExec test suite", () => {
             .get("/allEvents")
             .set("Authorization", `Bearer ${authToken}`);
             expect(res.status).toBe(200);
-        
     });
 });
