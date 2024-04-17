@@ -98,6 +98,7 @@ app.post("/signin", async(req,res) => {
     }
 })
 
+//create Service
 app.post("/createService", async(req,res)=> {
     try{
         const {aitext} = req.body
@@ -128,4 +129,5 @@ app.get("/allServices",async(req,res) => {
         res.status(500).json({error:err})
     }
 })
+
 module.exports = app;
