@@ -1667,3 +1667,267 @@ Server running at port - 3000
 Server running at port - 3000
 Server running at port - 3000
 Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Server running at port - 3000
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+Executing (default): SELECT "id", "name", "description", "contact", "createdAt", "updatedAt" FROM "Services" AS "Services" ORDER BY "Services"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
+Executing (default): SELECT "id", "name", "description", "contact", "createdAt", "updatedAt" FROM "Services" AS "Services" ORDER BY "Services"."id" DESC;
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
+Executing (default): SELECT "id", "name", "description", "contact", "createdAt", "updatedAt" FROM "Services" AS "Services" ORDER BY "Services"."id" DESC;
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+Executing (default): SELECT "id", "name", "description", "contact", "createdAt", "updatedAt" FROM "Services" AS "Services" ORDER BY "Services"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
+Executing (default): SELECT "id", "eventName", "venue", "description", "date", "createdAt", "updatedAt" FROM "Events" AS "Event" ORDER BY "Event"."id" DESC;
+[
+  Event {
+    dataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    _previousDataValues: {
+      id: [33m2[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:57:51.391Z[39m,
+      updatedAt: [35m2024-04-17T02:57:51.391Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  },
+  Event {
+    dataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    _previousDataValues: {
+      id: [33m1[39m,
+      eventName: [32m'Test Event'[39m,
+      venue: [32m'Test Venue'[39m,
+      description: [1mnull[22m,
+      date: [1mnull[22m,
+      createdAt: [35m2024-04-17T02:52:47.794Z[39m,
+      updatedAt: [35m2024-04-17T02:52:47.794Z[39m
+    },
+    uniqno: [33m1[39m,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: [33mfalse[39m,
+      _schema: [1mnull[22m,
+      _schemaDelimiter: [32m''[39m,
+      raw: [33mtrue[39m,
+      attributes: [36m[Array][39m
+    },
+    isNewRecord: [33mfalse[39m
+  }
+]
